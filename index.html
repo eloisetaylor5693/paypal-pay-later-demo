@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&components=messages" data-namespace="PayPalSDK"></script>
+    <title>Paypal SDK</title>
+</head>
+
+<body>
+    <h1>Paypal SDK</h1>
+    <p>The messaging doesn't show for currencies other than the default</p>
+
+    <section>
+        <h2>Using currency USD:</h2>
+        <p>✅ the messaging shows</p>
+        <div id="paypal-pay-later-message-USD" />
+    </section>
+
+    <section>
+        <h2>Using currency EUR:</h2>
+        <p>❌ the messaging doesn't show</p>
+        <div id="paypal-pay-later-message-EUR" />
+    </section>
+
+    <section>
+        <h2>Using currency GBP:</h2>
+        <p>❌ the messaging doesn't show</p>
+        <div id="paypal-pay-later-message-GBP" />
+    </section>
+
+    <section>
+        <h2>When not passing in a currency:</h2>
+        <p>❌ the messaging shows</p>
+        <div id="paypal-pay-later-message-no-currency" />
+    </section>
+    <script src="./index.js"></script>
+</body>
+
+</html>
