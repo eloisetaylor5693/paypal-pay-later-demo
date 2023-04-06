@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&components=messages&currency=EUR" data-namespace="PayPalSDK">
+  </script>
+  <title>Paypal SDK</title>
+</head>
+
+<body>
+  <h1>Paypal SDK</h1>
+  <p>The messaging doesn't show for currencies other than the default</p>
+
+  <section>
+    <h2>Using currency USD:</h2>
+    <p>✅ the messaging shows</p>
+    <div id="paypal-pay-later-message-USD" />
+  </section>
+
+  <section>
+    <h2>Using currency EUR:</h2>
+    <p>❌ the messaging doesn't show</p>
+    <div id="paypal-pay-later-message-EUR" />
+  </section>
+
+  <section>
+    <h2>When not passing in a currency:</h2>
+    <p>✅ the messaging shows</p>
+    <div id="paypal-pay-later-message-no-currency" />
+  </section>
+  <script src="./index.js"></script>
+
+
+  <section>
+    <h2>Code</h2>
+
+    <p>script:</p>
+    <code>
+        &lt;script src="https://www.paypal.com/sdk/js?client-id=sb&components=messages&currency=EUR" data-namespace="PayPalSDK" />
+    </code>
+
+    <pre>
+      <code>
+          PayPalSDK.Messages({
+              currency: "USD",
+              style: {
+                layout: "text",
+              },
+            }).render("#paypal-pay-later-message-USD");
+
+            PayPalSDK.Messages({
+              currency: "EUR",
+              style: {
+                layout: "text",
+              },
+            }).render("#paypal-pay-later-message-EUR");
+
+            PayPalSDK.Messages({
+              style: {
+                layout: "text",
+              },
+            }).render("#paypal-pay-later-message-no-currency");
+      </code>
+    </pre>
+  </section>
+</body>
+
+</html>
